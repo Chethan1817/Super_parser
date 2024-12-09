@@ -10,10 +10,7 @@ const Usage = () => {
           <p className="usage-key-text" style={{ flex: 1, margin: 0 }}>{Data}</p>
         </div>
         <div className="usage-info">
-          <div className="info-icon-container">
-            <span className="info-icon">ℹ</span>
-          </div>
-          <p className="usage-info-text">0 used of 50 total available</p>
+          <p className="usage-info-text"></p>
         </div>
       </div>
     </div>

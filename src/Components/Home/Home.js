@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import Apikey from '../Api/Apikey';
 import Profile from '../Settings/Profile';
 import Usage from '../Api/Usage';
-import Scroll from '../Api/Scroll';
+import MarqueeBanner from '../Api/MarqueeBanner';
 import Header from '../Api/Header';
-
+import Subscription from '../Billing/Subscription';
+import UserSubDetails from '../Billing/UserSubDetails';
+import Billing from '../Billing/Billing';
 const Home = () => {
   const [activeCategory, setActiveCategory] = useState('home');
   const [activeSubCategory, setActiveSubCategory] = useState('dashboard');
@@ -208,36 +210,25 @@ const Home = () => {
               }}>
                 Dashboard
               </h2>
-              <Scroll plan={currentPlan} />
+              <MarqueeBanner plan={currentPlan} />
               <Apikey />
               <Usage />
             </div>
           )}
 
           {activeCategory === 'billing' && activeSubCategory === 'subscriptions' && (
-            <div>
-              <h2>Subscriptions</h2>
-              <p>Subscription-related content goes here.</p>
-              <div>
-                <h3>Available Plans:</h3>
-                <ul>
-                  <li>
-                    <strong>Basic - $50/mo</strong>
-                    <p>500 credits/month, Rate limit: 5 call/sec</p>
-                    <p>Excess usage at $0.1/call</p>
-                  </li>
-                  <li>
-                    <strong>Advance - $100/mo</strong>
-                    <p>2000 credits/month, Rate limit: 5 call/sec</p>
-                    <p>Excess usage at $0.05/call</p>
-                  </li>
-                  <li>
-                    <strong>Premium - $250/mo</strong>
-                    <p>5000 credits/month, Rate limit: 5 call/sec</p>
-                    <p>Excess usage at $0.05/call</p>
-                  </li>
-                </ul>
-              </div>
+           <div>
+            <h2 style={{
+              display:"flex",
+              fontSize: '24px',
+              fontWeight: '600',
+              justifyContent:"center"
+            }}>Subscriptions & Billing</h2>
+            <MarqueeBanner plan={currentPlan} />
+            <h2>Subscription Plans</h2>
+            <Subscription/>
+            <UserSubDetails/>
+            <Billing/>
             </div>
           )}
 

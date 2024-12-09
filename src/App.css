@@ -312,3 +312,147 @@
       transform: translate(-100%, 0);
     }
   }
+
+
+
+
+
+.sub-details-container {
+  background-color: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.sub-details-header {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.sub-details-header-text {
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.sub-details-key-text {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 4px;
+  word-wrap: break-word;
+  color: #333;
+  border: 1px solid #e0e0e0;
+}
+.sub-details-info {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+.sub-details-info-text {
+  font-size: 14px;
+  color: #666;
+}
+
+
+
+
+
+.billing-container {
+  background-color: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.billing-header {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.billing-header-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.billing-key-text {
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 4px;
+  word-wrap: break-word;
+  color: #333;
+  border: 1px solid #e0e0e0;
+}
+.billing-info {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+.billing-info-text {
+  font-size: 14px;
+  color: #666;
+}
+
+
+
+.subscription-container {
+  background-color: #f5f5f5;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.subscription-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.subscription-plan {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  margin: 10px;
+}
+.to-start{
+  cursor: pointer;
+}
+.subscription-plan h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.subscription-plan p {
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.subscription-plan button {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.subscription-plan button:hover {
+  background-color: #2563eb;
+}
