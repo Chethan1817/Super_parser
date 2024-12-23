@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import Apikey from '../Api/Apikey';
 import Profile from '../Settings/Profile';
-import Usage from '../Api/Usage';
+import UsageMonth from '../Api/UsageMonth';
+import UsageHourly from '../Api/UsageHourly'
 import MarqueeBanner from '../Api/MarqueeBanner';
 import Header from '../Api/Header';
 import Subscription from '../Billing/Subscription';
 import UserSubDetails from '../Billing/UserSubDetails';
 import Billing from '../Billing/Billing';
+
+
 const Home = () => {
   const [activeCategory, setActiveCategory] = useState('home');
   const [activeSubCategory, setActiveSubCategory] = useState('dashboard');
-  
-  const currentPlan = 'Advance';
-
-  
 
   const handleCategoryClick = (category) => {
     if (activeCategory === category) {
@@ -210,9 +209,10 @@ const Home = () => {
               }}>
                 Dashboard
               </h2>
-              <MarqueeBanner plan={currentPlan} />
+              <MarqueeBanner/>
               <Apikey />
-              <Usage />
+              <UsageMonth />
+              <UsageHourly />
             </div>
           )}
 
@@ -224,7 +224,7 @@ const Home = () => {
               fontWeight: '600',
               justifyContent:"center"
             }}>Subscriptions & Billing</h2>
-            <MarqueeBanner plan={currentPlan} />
+            <MarqueeBanner />
             <h2>Subscription Plans</h2>
             <Subscription/>
             <UserSubDetails/>

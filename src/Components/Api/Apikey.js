@@ -1,9 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Copy, Check } from 'lucide-react';
+import { dashboardService } from '../services/api';
 
 const Apikey = () => {
-  const apiKey = 'your-actual-api-key-here';
+  const [apiKey, setApiKey] = useState('');
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    const fetchApiKey = async () => {
+      try {
+        const response = await dashboardService.getDashboardData();
+        if (response.data.status === "True") {
+          setApiKey(response.data.Data.api_key.api_key);
+        }
+      } catch (error) {
+        console.error('Error fetching API key:', error);
+      }
+    };
+
+    fetchApiKey();
+  }, []);
 
   const handleCopy = async () => {
     try {
