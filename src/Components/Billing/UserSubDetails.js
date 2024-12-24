@@ -29,7 +29,7 @@ const UserSubDetails = () => {
         }
 
         if (!subscription || subscription.plan === 'free') {
-            return "No active subscription plan, you are in free plan";
+            return "You are currently on the free plan and do not have an active subscription.";
         }
 
         return `You are in ${subscription.plan} plan with ${subscription.monthly_limit} credits per month. 

@@ -1,57 +1,31 @@
 import React from 'react';
+import { LogOut } from 'lucide-react';
 
 const Header = () => {
     const handleSignOut = () => {
-        window.location.href = 'https://developer.superparser.com/login.html';
-      };
+        localStorage.removeItem('jwt_token');        
+        window.location.href = '/';
+    };
     
-  return (
-    <div className="header" style={{
-      width: '100%',
-      backgroundColor: 'white',
-      borderBottom: '1px solid #ddd',
-      padding: '12px 20px',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      marginBottom: '10px',
-      boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
-      position: 'relative',
-      zIndex: 10
-    }}>
-      <div className="logo" style={{
-        display: 'flex',
-        alignItems: 'center',
-        flex: 1,
-        maxWidth: '1200px',
-        margin: '0 auto',
-        padding: '0 250px'
-      }}>
-        <span style={{
-          fontSize: '22px',
-          fontWeight: 'bold'
-        }}>
-          <span style={{ color: '#FFD700' }}>Super</span>
-          <span>Parser</span>
-        </span>
-        
-        <button 
-          onClick={handleSignOut}
-          style={{
-            padding: '8px 16px',
-            backgroundColor: 'transparent',
-            border: 'none',
-            color: '#3b82f6',
-            cursor: 'pointer',
-            fontSize: '16px',
-            marginLeft: 'auto'
-          }}
-        >
-          <strong>Sign out</strong>
-        </button>
-      </div>
-    </div>
-  );
+    return (
+        <div className="bg-[#1E2B3C] text-white border-b border-gray-700">
+            <div className="px-4 h-14 flex items-center justify-between">
+                <div className="flex items-center">
+                    <span className="text-xl m-[300px] font-black ">
+                        <span className="text-yellow-400">Super</span>
+                        <span className="text-white">Parser</span>
+                    </span>
+                </div>
+                <button 
+                    onClick={handleSignOut}
+                    className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-200"
+                >
+                    <LogOut className="h-4 w-4" />
+                    <span className="font-bold mr-[300px]">Sign out</span>
+                </button>
+            </div>
+        </div>
+    );
 };
 
 export default Header;
